@@ -1,3 +1,6 @@
+
+/* ---------------general settings -------------------*/
+
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -31,7 +34,18 @@ a {
   color: whitesmoke;
   margin: 20px 3px 20px 15px;
 }
-nav {
+h3 {
+  color: white;
+  margin-left: 20px;
+}
+
+span {
+  color: white;
+}
+
+
+/*---------------principal top menu----------*/
+#nav {
   display: flex;
   justify-content: space-between;
   height: 70px;
@@ -43,9 +57,7 @@ nav {
 .logo {
   font-size: 20px;
 }
-span {
-  color: white;
-}
+
 .barra-busqueda {
   
   display: flex;
@@ -79,6 +91,9 @@ span {
   color: rgb(246, 66, 76);
 }
 
+
+
+/*-------------------Main container--------------------*/
 .main-container {
   position: relative;
   width: 100vw;
@@ -86,25 +101,16 @@ span {
   display: flex;
   overflow: hidden;
 }
+/*----scroll settings------------*/
 .video1::-webkit-scrollbar,
 .left::-webkit-scrollbar,
 .video1::-webkit-scrollbar-track {
   display: none;
 }
 
-/* .right::-webkit-scrollbar-{
-   height: 30px;
-  }
-   
-  /* .right::-webkit-scrollbar-thumb {
-    background: gold;
-    outline: 1px solid greenyellow;
-  } */ 
-h3 {
-  color: white;
-  margin-left: 20px;
-}
 
+
+/*------------Lateral menu----------*/
 .left {
   min-width: 175px;
   height: 100vh;
@@ -117,35 +123,19 @@ h3 {
   height: calc(100vh - 70px);
   overflow: scroll;
 }
-
-.right {
-
-  width: calc(100vw - 175px);
-  height: fit-content;
-  background-color: rgb(15, 15, 15);
-}
-.right.active{
-  position: absolute;
-  right: 0;
-  width: calc(100vw - 44px);
-}
-
-
-
-.video1:hover {
- 
-  overflow: scroll;
- 
-}
-
 .line {
   margin: 5px 0 5px 0;
   border-bottom: 2px solid rgb(68, 66, 66);
 }
+.left > a > i {
+  margin-right: 15px;
+}
 
+
+/*--------inner menu--------*/
 .menu {
   display: flex;
-
+overflow: hidden;
   list-style: none;
   justify-content: center;
   background-color: rgb(15, 15, 15);
@@ -160,16 +150,32 @@ h3 {
 }
 .menu.active{
   width: calc(100vw - 44px);
- overflow:hidden;
+ 
 }
 .menu>li{
-
-  margin-right: 5vw;
+  margin-right: 6vw;
 }
-
 .inner-nav > ul > li:hover {
   border-bottom: 2px solid;
   cursor: pointer;
+}
+
+
+/*-----------"Videos container-----"*/
+.right {
+
+  width: calc(100vw - 175px);
+  height: fit-content;
+  background-color: rgb(15, 15, 15);
+}
+.right.active{ /*for a function ...toggle*/
+  position: absolute;
+  right: 0;
+  width: calc(100vw - 44px);
+}
+
+#right:hover {
+  overflow: scroll;
 }
 .video1 {
   height: 100vh;
@@ -184,12 +190,9 @@ padding-top: 65px;
 .video_tex > a {
   margin-bottom: 3px;
 }
-.left > a > i {
-  margin-right: 15px;
-}
 
 .text {
-  color: white;
+  color: rgb(255, 255, 255);
   max-width: fit-content;
   margin: 0;
   padding-left: 20px;
@@ -221,7 +224,13 @@ padding-top: 65px;
 .img_after {
   position: relative;
   width: fit-content;
+
 }
+.img_after:hover{
+  transition-duration: .5s;
+   transform:scale(1.03);
+}
+
 
 .img_after::after {
   content: "3:25";
@@ -230,6 +239,7 @@ padding-top: 65px;
   right: 30px;
   bottom: 10px;
   background-color: rgba(0, 0, 0, 0.473);
+  
 }
 
 .img_after:hover::before {
@@ -237,6 +247,6 @@ padding-top: 65px;
   position: absolute;
   right: calc(50% - 32px);
   bottom: calc(50% - 32px);
-  
+  opacity: .6;
 }
 
