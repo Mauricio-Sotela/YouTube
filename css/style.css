@@ -127,7 +127,7 @@ h3 {
 .right.active{
   position: absolute;
   right: 0;
-  width: calc(100vw - 45px);
+  width: calc(100vw - 44px);
 }
 
 
@@ -146,7 +146,7 @@ h3 {
 .menu {
   display: flex;
   list-style: none;
-  justify-content: space-around;
+  justify-content: space-evenly;
   background-color: rgb(15, 15, 15);
   height: 50px;
   color: rgb(255, 255, 255);
@@ -154,7 +154,7 @@ h3 {
   margin-top: 0;
   position: fixed;
   top: 70px;
-  width: 100%;
+  width: 100vw;
   z-index: 100;
 }
 
