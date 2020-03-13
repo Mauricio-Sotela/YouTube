@@ -29,7 +29,7 @@ a {
   list-style: none;
   text-decoration: none;
   color: whitesmoke;
-  margin: 20px;
+  margin: 20px 3px 20px 15px;
 }
 nav {
   display: flex;
@@ -80,6 +80,7 @@ span {
 }
 
 .main-container {
+  position: relative;
   width: 100vw;
   height: calc(100vh - 70px);
   display: flex;
@@ -116,11 +117,21 @@ h3 {
   height: calc(100vh - 70px);
   overflow: scroll;
 }
+
 .right {
-  min-width: 200px;
+
+  width: calc(100vw - 175px);
   height: fit-content;
   background-color: rgb(15, 15, 15);
 }
+.right.active{
+  position: absolute;
+  right: 0;
+  width: calc(100vw - 45px);
+}
+
+
+
 .video1:hover {
  
   overflow: scroll;
@@ -132,22 +143,21 @@ h3 {
   border-bottom: 2px solid rgb(68, 66, 66);
 }
 
-.inner-nav > ul {
+.menu {
   display: flex;
   list-style: none;
   justify-content: space-around;
   background-color: rgb(24, 24, 30);
   height: 50px;
-  color: white;
-  text-align: center;
+  color: rgb(255, 255, 255);
   align-items: center;
   margin-top: 0;
   position: fixed;
   top: 70px;
-  width: 90%;
-  z-index: 1000;
- 
+  width: 100%;
+  z-index: 100;
 }
+
 .inner-nav > ul > li:hover {
   border-bottom: 2px solid;
   cursor: pointer;
@@ -187,11 +197,13 @@ padding-top: 65px;
 }
 .video_tex {
   position: relative;
-  width: fit-content;
+  width: 300px;
   height: fit-content;
+  margin: 5px;
 }
 .after{
-  margin-right: 15px;
+ 
+  width: 100%;
 }
 .img_after {
   position: relative;
