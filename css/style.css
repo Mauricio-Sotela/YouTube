@@ -147,7 +147,7 @@ h3 {
   display: flex;
   list-style: none;
   justify-content: space-around;
-  background-color: rgb(24, 24, 30);
+  background-color: rgb(15, 15, 15);
   height: 50px;
   color: rgb(255, 255, 255);
   align-items: center;
@@ -187,6 +187,7 @@ padding-top: 65px;
 }
 .video_tex > p {
   margin-top: 2px;
+  margin-bottom: 2px;
 }
 .mill,
 .view {
@@ -200,6 +201,9 @@ padding-top: 65px;
   width: 300px;
   height: fit-content;
   margin: 5px;
+}
+.video_tex:last-of-type{
+  margin-bottom: 9vh;
 }
 .after{
  
