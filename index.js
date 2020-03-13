@@ -35,10 +35,11 @@ function pic() {
   <li>HOME</li>
   <li>VIDEOS</li>
   <li>PLAYLIST</li>
+  
   <li>COMMUNITY</li>
   <li>CHANNELS</li>
   <li>ABOUT</li>
-  <li><i class="fas fa-search"></i></li>
+ 
 </ul>`;
 
   
@@ -101,7 +102,7 @@ document.getElementById('boton-menu').addEventListener('click', () => {
 });
 
 const comprobarAncho = () => {
-	if(window.innerWidth >= 768){
+	if(window.innerWidth >= 800){
 		contenedor_video.classList.remove('active');
 	} else {
 		contenedor_video.classList.add('active');

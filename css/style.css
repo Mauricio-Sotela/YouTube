@@ -145,6 +145,7 @@ h3 {
 
 .menu {
   display: flex;
+
   list-style: none;
   justify-content: center;
   background-color: rgb(15, 15, 15);
@@ -154,14 +155,16 @@ h3 {
   margin-top: 0;
   position: fixed;
   top: 70px;
-  right:0 ;
-  left:177px;
-  bottom: 0;
-  width: 100%;
+  width: calc(100vw - 175px);
   z-index: 100;
 }
-.menu li{
-  margin-right: 120px;
+.menu.active{
+  width: calc(100vw - 44px);
+ overflow:hidden;
+}
+.menu>li{
+
+  margin-right: 5vw;
 }
 
 .inner-nav > ul > li:hover {
