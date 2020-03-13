@@ -43,7 +43,7 @@ function pic() {
 
   
 ////////////// "videos" /////////////
-  for (let i = 0; i < 48; i++) {
+  for (let i = 1; i <= 50; i++) {
     video_content = document.createElement(`Div`);
     video_content.className += "video_tex";
     video_inner = document.innerHTML = ` <div class="img_after"><img class="after"
