@@ -55,18 +55,18 @@ pic();
 
 //////////////// functions to change the background----- dark mode simulation/////////
 function color1() {
-  document.getElementById("right").style.background = "rgba(136, 132, 203)";
-  document.getElementById("nav").style.background = "rgba(136, 132, 203)";
-  document.getElementById("left").style.background = "rgba(136, 132, 203)";
-  document.getElementById("menu").style.background = "rgba(136, 132, 203)";
+  document.getElementById("right").style.background = "#0f0f0f";
+  document.getElementById("nav").style.background = "#16181d";
+  document.getElementById("left").style.background = "#181818";
+  document.getElementById("menu").style.background = "#0f0f0f";
 
-  for (let i = 0; i < video.getElementsByTagName("h5").length; i++) {
-    video.getElementsByTagName("h5")[i].style.color = "black";
-  }
+  // for (let i = 0; i < video.getElementsByTagName("h5").length; i++) {
+  //   video.getElementsByTagName("h5")[i].style.color = "black";
+  // }
 
-  for (let i = 0; i < video.getElementsByTagName("span").length; i++) {
-    video.getElementsByTagName("span")[i].style.color = "black";
-  }
+  // for (let i = 0; i < video.getElementsByTagName("span").length; i++) {
+  //   video.getElementsByTagName("span")[i].style.color = "black";
+  // }
 }
 
 function color2() {
@@ -86,16 +86,14 @@ function color2() {
 // }
 
 ///////////////  Hamburger menu toggle   ////////////////////
-const contenedor_video = document.getElementById("toggle");
+const contenedor_video = document.getElementById("main_container");
 const contenedor_menu = document.getElementById("menu");
-
-
 
 document.getElementById("boton-menu").addEventListener("click", () => {
   contenedor_video.classList.toggle("active");
   contenedor_menu.classList.toggle("active");
 });
-
+///////////////min width 800px///////////////
 const resize = () => {
   if (window.innerWidth >= 800) {
     contenedor_video.classList.remove("active");
@@ -103,9 +101,7 @@ const resize = () => {
     contenedor_video.classList.add("active");
   }
 };
-
 resize();
-
 window.addEventListener("resize", () => {
   resize();
 });
@@ -115,4 +111,15 @@ const pop_menu = document.getElementById("pop_menu");
 
 document.getElementById("user").addEventListener("click", () => {
   pop_menu.classList.toggle("able");
+});
+
+document.getElementById("right").addEventListener("click", () => {
+  pop_menu.classList.add("able");
+});
+
+document.getElementById("left").addEventListener("click", () => {
+  pop_menu.classList.add("able");
+});
+document.getElementById("menu").addEventListener("click", () => {
+  pop_menu.classList.add("able");
 });
