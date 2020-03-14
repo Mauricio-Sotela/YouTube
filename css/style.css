@@ -310,7 +310,7 @@ span {
 }
 
 .img_after:hover::before {
-  content: url(/img/1608384-64.png);
+  content: url(../img/1608384-64.png);
   position: absolute;
   right: calc(50% - 32px);
   bottom: calc(50% - 32px);
