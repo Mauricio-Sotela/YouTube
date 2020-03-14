@@ -290,14 +290,32 @@ span {
 }
 .after {
   width: 100%;
+  
+  
 }
+@keyframes zoom {
+  0% {
+      transform: scale(1,1);
+  }
+  50% {
+      transform: scale(1.5,1.2);
+  }
+  100% {
+      transform: scale(1,1);
+  }
+}
+
+
 .img_after {
   position: relative;
   width: fit-content;
+  overflow: hidden;
+ 
 }
-.img_after:hover {
-  transition-duration: 0.5s;
+.after:hover {
+ 
   transform: scale(1.03);
+  animation: zoom 15s infinite ;
 }
 
 .img_after::after {
@@ -309,10 +327,77 @@ span {
   background-color: rgba(0, 0, 0, 0.473);
 }
 
-.img_after:hover::before {
+.img_after:hover::after {
   content: url(../img/1608384-64.png);
   position: absolute;
   right: calc(50% - 32px);
   bottom: calc(50% - 32px);
   opacity: 0.6;
+  background-color: transparent;
+}
+
+/*---------custom input radio------------*/
+/* The container */
+.check {
+  display: inline-block;
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 12px;
+  margin-left: 12px;
+  cursor: pointer;
+  font-size: 19px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.check input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.check:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.check input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  
+}
+
+/* Show the indicator (dot/circle) when checked */
+.check input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.check .checkmark:after {
+ 	top: calc(100% - 14px);
+	left: calc(100% - 14px);
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
 }

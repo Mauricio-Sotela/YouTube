@@ -49,10 +49,17 @@
                 <a href="#"><i class="fas fa-sign-out-alt"></i>Sign out</a>
                 <hr width="100%">
                 <a href="#"><i class="fas fa-adjust"></i>Dark mode
-                    <input type="radio" name="dark" id="2" onClick="color2()">On
-                    <input type="radio" name="dark" id="1" checked onClick="color1()">Off
+
+                    <label class="check">On
+                        <input type="radio" checked="checked" name="radio" onClick="color1()">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="check">Off
+                        <input type="radio" name="radio" onClick="color2()">
+                        <span class="checkmark"></span>
+                    </label>
                 </a>
-                <a href="#"><i class="fas fa-language"></i>Language 
+                <a href="#"><i class="fas fa-language"></i>Language
                     <select name="language" id="">
                         <option value="Spanish">Spanish</option>
                         <option value="English" selected>English</option>
