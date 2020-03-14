@@ -43,7 +43,7 @@ function pic() {
     video_inner = document.innerHTML = ` <div class="img_after"><img class="after"
                     src="https://picsum.photos/350/200?random=${Math.ceil(
                       Math.random() * 8
-                    )}" alt=""onClick="zoom()" ></a></div>
+                    )}" alt=""></a></div>
         <h5 class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, dolorum.</h5>
         <p><span class="mill" id="minute">356184 mill </span><span class="view">3 Years ago</span></p>
     </div>`;
