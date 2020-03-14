@@ -19,7 +19,7 @@ function pic() {
 
 
 ///////////// lateral manu //////
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < 20; i++) {
     left_menu.innerHTML += `<a href="#"><i class="fas fa-home"></i>Home</a>
 
     <a href="#"><i class="fas fa-fire"></i>Trending</a>
@@ -101,9 +101,16 @@ function color2() {
 const contenedor_video = document.getElementById("toggle");
 const contenedor_menu = document.getElementById("menu");
 
+const pop_menu = document.getElementById("pop_menu");
+
 document.getElementById('boton-menu').addEventListener('click', () => {
   contenedor_video.classList.toggle('active');
   contenedor_menu.classList.toggle('active');
+});
+
+document.getElementById('user').addEventListener('click', () => {
+  pop_menu.classList.toggle('able');
+ 
 });
 
 const resize = () => {

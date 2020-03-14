@@ -1,4 +1,3 @@
-
 /* ---------------general settings -------------------*/
 
 html {
@@ -18,13 +17,13 @@ body {
 *:after {
   box-sizing: inherit;
 }
-button{
+button {
   border: none;
   background-color: transparent;
   width: auto;
   height: auto;
 }
-i{
+i {
   color: white;
   font-size: 20px;
 }
@@ -43,7 +42,6 @@ span {
   color: white;
 }
 
-
 /*---------------principal top menu----------*/
 #nav {
   display: flex;
@@ -59,7 +57,6 @@ span {
 }
 
 .barra-busqueda {
-  
   display: flex;
   width: 50vw;
 }
@@ -91,7 +88,74 @@ span {
   color: rgb(246, 66, 76);
 }
 
+/*////////////----------pop_menu---------/////*/
+.pop_menu {
+  position: absolute;
+  right: 50px;
+  top: 70px;
+  border: 1px solid rgba(170, 170, 170, 0.644);
+  z-index: 1000;
+  background-color: rgba(41, 41, 41, 0.98);
+  width: 300px;
+}
+.option {
+  display: flex;
+  flex-direction: column;
+  height: 60vh;
 
+  overflow: scroll;
+}
+.pop_menu.able {
+  display: none;
+}
+.pop_menu .user {
+  display: flex;
+  flex-direction: row;
+}
+.user img {
+  width: 45px;
+  border-radius: 50%;
+}
+.user > .img2 {
+  text-align: center;
+  width: 30%;
+  justify-content: center;
+
+}
+.img2>img{
+  margin-top: 20px;
+}
+.user > .info {
+
+  width: 80%;
+}
+.user .name {
+  padding-left: 15px;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 0;
+  color: white;
+}
+.user .email {
+  padding-left: 15px;
+  margin-top: 0;
+  color: white;
+}
+.user a{
+  color: #346796;
+}
+.option a{
+  margin: 0;
+  padding:10px;
+  font-size: 18px;
+}
+.option a i{
+  margin-right: 20px;
+}
+
+.option a:hover{
+  background-color: rgba(61, 61, 61, 0.876);
+}
 
 /*-------------------Main container--------------------*/
 .main-container {
@@ -104,14 +168,15 @@ span {
 /*----scroll settings------------*/
 .video1::-webkit-scrollbar,
 .left::-webkit-scrollbar,
-.video1::-webkit-scrollbar-track {
+.video1::-webkit-scrollbar-track,
+.option::-webkit-scrollbar,
+.option::-webkit-scrollbar-track {
   display: none;
 }
 
-
-
 /*------------Lateral menu----------*/
 .left {
+  display: none;
   min-width: 175px;
   height: 100vh;
   overflow: hidden;
@@ -127,15 +192,25 @@ span {
   margin: 5px 0 5px 0;
   border-bottom: 2px solid rgb(68, 66, 66);
 }
+
+.left > a {
+  padding: 12px 0 12px 15px;
+  margin: 2px 0;
+}
+.left > a:hover {
+  background-color: rgb(83, 83, 81);
+}
 .left > a > i {
   margin-right: 15px;
 }
-
+.left a:focus {
+  background-color: red;
+}
 
 /*--------inner menu--------*/
 .menu {
   display: flex;
-overflow: hidden;
+  overflow: hidden;
   list-style: none;
   justify-content: center;
   background-color: rgb(15, 15, 15);
@@ -148,11 +223,10 @@ overflow: hidden;
   width: calc(100vw - 175px);
   z-index: 100;
 }
-.menu.active{
+.menu.active {
   width: calc(100vw - 44px);
- 
 }
-.menu>li{
+.menu > li {
   margin-right: 6vw;
 }
 .inner-nav > ul > li:hover {
@@ -160,15 +234,14 @@ overflow: hidden;
   cursor: pointer;
 }
 
-
 /*-----------"Videos container-----"*/
 .right {
-
   width: calc(100vw - 175px);
   height: fit-content;
   background-color: rgb(15, 15, 15);
 }
-.right.active{ /*for a function ...toggle*/
+.right.active {
+  /*for a function ...toggle*/
   position: absolute;
   right: 0;
   width: calc(100vw - 44px);
@@ -180,7 +253,7 @@ overflow: hidden;
 .video1 {
   height: 100vh;
   overflow: hidden;
-padding-top: 65px;
+  padding-top: 65px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -195,16 +268,14 @@ padding-top: 65px;
   color: rgb(255, 255, 255);
   max-width: fit-content;
   margin: 0;
-  padding-left: 20px;
 }
 .video_tex > p {
-  margin-top: 2px;
-  margin-bottom: 2px;
+  margin-top: 5px;
 }
 .mill,
 .view {
   color: white;
-  margin-left: 20px;
+  margin-right: 20px;
   font-size: 14px;
   font-style: italic;
 }
@@ -214,23 +285,20 @@ padding-top: 65px;
   height: fit-content;
   margin: 5px;
 }
-.video_tex:last-of-type{
+.video_tex:last-of-type {
   margin-bottom: 9vh;
 }
-.after{
- 
+.after {
   width: 100%;
 }
 .img_after {
   position: relative;
   width: fit-content;
-
 }
-.img_after:hover{
-  transition-duration: .5s;
-   transform:scale(1.03);
+.img_after:hover {
+  transition-duration: 0.5s;
+  transform: scale(1.03);
 }
-
 
 .img_after::after {
   content: "3:25";
@@ -239,7 +307,6 @@ padding-top: 65px;
   right: 30px;
   bottom: 10px;
   background-color: rgba(0, 0, 0, 0.473);
-  
 }
 
 .img_after:hover::before {
@@ -247,6 +314,5 @@ padding-top: 65px;
   position: absolute;
   right: calc(50% - 32px);
   bottom: calc(50% - 32px);
-  opacity: .6;
+  opacity: 0.6;
 }
-
