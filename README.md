@@ -3,5 +3,5 @@
 YouTube project
 
 
-
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/QNcsptMF7Uk/0.jpg)](https://www.youtube.com/watch?v=QNcsptMF7Uk)
+## video
+[![IMAGE ALT TEXT HERE](https://github.com/Mauricio-Sotela/YouTube/blob/master/img/youtube.gif)](https://www.youtube.com/watch?v=QNcsptMF7Uk)
