@@ -290,8 +290,6 @@ span {
 }
 .after {
   width: 100%;
-  
-  
 }
 @keyframes zoom {
   0% {
@@ -313,8 +311,6 @@ span {
  
 }
 .after:hover {
- 
-  transform: scale(1.03);
   animation: zoom 15s infinite ;
 }
 
