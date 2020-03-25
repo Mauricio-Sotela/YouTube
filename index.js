@@ -54,6 +54,23 @@ function pic() {
 pic();
 
 //////////////// functions to change the background----- dark mode simulation/////////
+
+const btnSwitch = document.querySelector('#switch');
+const right= document.querySelector('#right');
+const left = document.querySelector('#left');
+const nav = document.querySelector('#nav');
+const menu = document.querySelector('#menu');
+
+btnSwitch.addEventListener('click', () => {
+  btnSwitch.classList.toggle('active' );
+  right.classList.toggle('d_mode' )
+ left.classList.toggle('d_mode' )
+  nav.classList.toggle('d_mode' )
+  menu.classList.toggle('d_mode' )
+});
+
+
+
 function color1() {
   document.getElementById("right").style.background = "#0f0f0f";
   document.getElementById("nav").style.background = "#16181d";

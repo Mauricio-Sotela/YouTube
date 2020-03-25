@@ -120,13 +120,11 @@ span {
   text-align: center;
   width: 30%;
   justify-content: center;
-
 }
-.img2>img{
+.img2 > img {
   margin-top: 20px;
 }
 .user > .info {
-
   width: 80%;
 }
 .user .name {
@@ -141,19 +139,19 @@ span {
   margin-top: 0;
   color: white;
 }
-.user a{
+.user a {
   color: #346796;
 }
-.option a{
+.option a {
   margin: 0;
-  padding:10px;
+  padding: 10px;
   font-size: 18px;
 }
-.option a i{
+.option a i {
   margin-right: 20px;
 }
 
-.option a:hover{
+.option a:hover {
   background-color: rgba(61, 61, 61, 0.876);
 }
 
@@ -293,25 +291,23 @@ span {
 }
 @keyframes zoom {
   0% {
-      transform: scale(1,1);
+    transform: scale(1, 1);
   }
   50% {
-      transform: scale(1.5,1.2);
+    transform: scale(1.5, 1.2);
   }
   100% {
-      transform: scale(1,1);
+    transform: scale(1, 1);
   }
 }
-
 
 .img_after {
   position: relative;
   width: fit-content;
   overflow: hidden;
- 
 }
 .after:hover {
-  animation: zoom 15s infinite ;
+  animation: zoom 15s infinite;
 }
 
 .img_after::after {
@@ -332,9 +328,75 @@ span {
   background-color: transparent;
 }
 
+/*///////////Dark mode/////////////*/
+.dmode {
+  display: flex;
+}
+
+.switch {
+  margin-left: 1rem;
+  background: #343d5b;
+  border-radius: 1000px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  outline: none;
+}
+
+.switch::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background: #f1f1f1;
+  top: 0;
+  left: 0;
+  right: inherit;
+  border-radius: 100px;
+  transition: 0.3s ease all;
+}
+
+.switch.active {
+  background: orange;
+}
+
+.switch.active::after {
+  right: 0px;
+  left: inherit;
+}
+
+.switch span {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  display: block;
+  background: none;
+  color: #fff;
+}
+
+.switch span:nth-child(2) {
+  padding-left: 10px;
+}
+.d_mode {
+  background-color: rgb(230, 230, 241) !important;
+  color: black;
+}
+.d_mode.left a,
+.d_mode.left i,
+.d_mode .contenedor-logo .boton-menu i,
+.d_mode .contenedor-logo a span,
+.d_mode .barra-busqueda .fas,
+.d_mode .botones-header .fas,
+.d_mode .video_tex h5,
+.d_mode .video_tex p span {
+  color: black;
+}
+
 /*---------custom input radio------------*/
 /* The container */
-.check {
+/*.check {
   display: inline-block;
   position: relative;
   padding-left: 25px;
@@ -346,17 +408,17 @@ span {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}
+}*/
 
 /* Hide the browser's default radio button */
-.check input {
+/* .check input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
-}
+} */
 
 /* Create a custom radio button */
-.checkmark {
+/* .checkmark {
   position: absolute;
   top: 0;
   left: 0;
@@ -364,36 +426,36 @@ span {
   width: 20px;
   background-color: #eee;
   border-radius: 50%;
-}
+} */
 
 /* On mouse-over, add a grey background color */
-.check:hover input ~ .checkmark {
+/* .check:hover input ~ .checkmark {
   background-color: #ccc;
-}
+} */
 
 /* When the radio button is checked, add a blue background */
-.check input:checked ~ .checkmark {
+/* .check input:checked ~ .checkmark {
   background-color: #2196F3;
-}
+} */
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
-.checkmark:after {
+/* .checkmark:after {
   content: "";
   position: absolute;
   
-}
+} */
 
 /* Show the indicator (dot/circle) when checked */
-.check input:checked ~ .checkmark:after {
+/* .check input:checked ~ .checkmark:after {
   display: block;
-}
+} */
 
 /* Style the indicator (dot/circle) */
-.check .checkmark:after {
+/* .check .checkmark:after {
  	top: calc(100% - 14px);
 	left: calc(100% - 14px);
 	width: 8px;
 	height: 8px;
 	border-radius: 50%;
 	background: white;
-}
+} */
