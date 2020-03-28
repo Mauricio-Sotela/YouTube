@@ -1,11 +1,4 @@
-//   setInterval(function time1() {
-//        var today = new Date();
-//      time =
-//       today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
 
-//       console.log();
-//       return
-//   }, 1000);
 
 //////// main function --menu and "videos" injection--///////
 let video = document.getElementById("right");
@@ -71,37 +64,6 @@ btnSwitch.addEventListener('click', () => {
 
 
 
-function color1() {
-  document.getElementById("right").style.background = "#0f0f0f";
-  document.getElementById("nav").style.background = "#16181d";
-  document.getElementById("left").style.background = "#181818";
-  document.getElementById("menu").style.background = "#0f0f0f";
-
-  // for (let i = 0; i < video.getElementsByTagName("h5").length; i++) {
-  //   video.getElementsByTagName("h5")[i].style.color = "black";
-  // }
-
-  // for (let i = 0; i < video.getElementsByTagName("span").length; i++) {
-  //   video.getElementsByTagName("span")[i].style.color = "black";
-  // }
-}
-
-function color2() {
-  document.getElementById("right").style.background = "rgb(23, 41, 57)";
-  document.getElementById("nav").style.background = "rgb(23, 41, 57)";
-  document.getElementById("left").style.background = "rgb(23, 41, 57)";
-  document.getElementById("menu").style.background = "rgb(23, 41, 57)";
-}
-
-// function zoom(){
-//   for (let i = 0; i < video.getElementsByTagName("img").length; i++) {
-//     video.getElementsByTagName("img")[1].setAttribute(
-//   "style", "border: 2px solid red ");
-
-//   }
-
-// }
-
 ///////////////  Hamburger menu toggle   ////////////////////
 const contenedor_video = document.getElementById("main_container");
 const contenedor_menu = document.getElementById("menu");
@@ -142,3 +104,8 @@ document.getElementById("menu").addEventListener("click", () => {
 });
 
 
+// jj=document.querySelectorAll('span, h5,i');
+// for (let i = 0; i < jj.length; i++) {
+//     jj[i].style.color='red'
+  
+// }
